@@ -13,6 +13,7 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
+      "@acme/ek-project": ["extensions/ek-project/src/index.ts"],
       "@acme/hr-project": ["extensions/hr-project/src/index.ts"],
       "@alfresco/aca-content": ["projects/aca-content/src/public-api.ts"],
       "@alfresco/aca-content/about": ["projects/aca-content/about/src/public-api.ts"],

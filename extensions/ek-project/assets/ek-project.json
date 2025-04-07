@@ -1,12 +1,12 @@
 {
   "$schema": "../../../extension.schema.json",
-  "$id": "acme.ek.customizations.core",
-  "$name": "acme.ek.customizations.core",
+  "$id": "acme.hr.customizations.core",
+  "$name": "acme.hr.customizations.core",
   "$version": "1.0.0",
   "$vendor": "ACME, Inc. and its affiliates",
   "$license": "LGPL-3.0",
   "$runtime": "1.7.0",
-  "$description": "ACME EK Repo Project customizations",
+  "$description": "ACME HR Project customizations",
   "$references": [],
   "$ignoreReferenceList": [],
 

@@ -94,6 +94,16 @@
             "glob": "**/*",
             "input": "extensions/hr-project/assets",
             "output": "./assets/hr-project"
+          },
+          {
+            "glob": "ek-project.json",
+            "input": "extensions/ek-project/assets",
+            "output": "./assets/plugins"
+          },
+          {
+            "glob": "**/*",
+            "input": "extensions/ek-project/assets",
+            "output": "./assets/ek-project"
           }
         ],
         "styles": [

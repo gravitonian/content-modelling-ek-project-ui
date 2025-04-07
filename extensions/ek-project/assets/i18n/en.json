@@ -1,0 +1,26 @@
+{
+  "APP": {
+    "BROWSE": {
+      "SEARCH": {
+        "HR_POLICY_DOC": "HR Policy Doc"
+      }
+    },
+    "DOCUMENT_LIST": {
+      "COLUMNS": {
+        "TYPE": "Content Type"
+      }
+    },
+    "CONTENT_METADATA": {
+      "TITLED_GROUP_TITLE": "Titled",
+      "VERSIONING_GROUP_TITLE": "Versioning",
+      "HR_EMPLOYEE_HANDBOOK_GROUP_TITLE": "HR Handbook",
+      "HR_POLICY_DOC_GROUP_TITLE": "HR Policy Doc",
+      "HR_FORM_GROUP_TITLE": "HR Form",
+      "HR_TRAINING_GUIDE_GROUP_TITLE": "HR Training Guide"
+    },
+    "CATEGORIES": {
+      "HR_REVIEW_DATE": "HR Review Date",
+      "HR_POLICY_DOC_STATUS": "HR Policy Status"
+    }
+  }
+}

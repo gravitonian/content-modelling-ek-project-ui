@@ -17,7 +17,7 @@
       {
         "id": "app.search.hrPolicyDoc",
         "order": 400,
-        "name": "APP.BROWSE.SEARCH.HR_POLICY_DOC",
+        "name": "HR_PROJECT.BROWSE.SEARCH.HR_POLICY_DOC",
         "default": false,
         "filterWithContains": true,
         "app:fields": ["cm:name", "cm:title", "cm:description", "hr:reviewDate", "hr:status", "TEXT", "TAG"],
@@ -192,30 +192,14 @@
 
     "content-metadata-presets": [
       {
-        "id": "app.content.metadata.custom",
+        "id": "hr-project.content.metadata.custom",
         "custom": [
           {
-            "id": "app.content.metadata.customSetting",
+            "id": "hr-project.content.metadata.customSetting",
             "includeAll": true,
             "exclude": [
-              "rn:renditioned",
-              "cm:versionable",
-              "cm:auditable",
-              "cm:thumbnailModification",
-              "cm:content",
-              "cm:author",
               "cm:titled",
-              "cm:generalclassifiable",
-              "cm:taggable",
-              "dp:restrictable",
-              "fm:commentsRollup",
-              "qshare:shared",
-              "exif:exif",
-              "iptcxmp:iptcxmpAspect",
-              "cm:effectivity",
-              "cm:likesRatingSchemeRollups",
-              "cm:lockable",
-              "cm:ownable",
+              "cm:versionable",
               "hr:employeeHandbook",
               "hr:hrPolicyDocument",
               "hr:hrForm",
@@ -224,7 +208,7 @@
           },
           {
             "id": "app.content.metadata.titledGroup",
-            "title": "APP.CONTENT_METADATA.TITLED_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.TITLED_GROUP_TITLE",
             "items": [
               {
                 "id": "app.content.metadata.titledAspect",
@@ -237,22 +221,8 @@
             ]
           },
           {
-            "id": "app.content.metadata.effectivityGroup",
-            "title": "APP.CONTENT_METADATA.EFFECTIVITY_GROUP_TITLE",
-            "items": [
-              {
-                "id": "app.content.metadata.effectivityAspect",
-                "aspect": "cm:effectivity",
-                "properties": [
-                  "cm:from",
-                  "cm:to"
-                ]
-              }
-            ]
-          },
-          {
             "id": "custom.content.metadata.versionGroup",
-            "title": "APP.CONTENT_METADATA.VERSIONING_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.VERSIONING_GROUP_TITLE",
             "items": [
               {
                 "id": "custom.content.metadata.versionableAspect",
@@ -266,22 +236,22 @@
           },
           {
             "id": "custom.content.metadata.employeeHandbookGroup",
-            "title": "APP.CONTENT_METADATA.HR_EMPLOYEE_HANDBOOK_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.HR_EMPLOYEE_HANDBOOK_GROUP_TITLE",
             "items": [
               {
                 "id": "custom.content.metadata.employeeHandbookType",
-                "aspect": "hr:employeeHandbook",
+                "type": "hr:employeeHandbook",
                 "properties": []
               }
             ]
           },
           {
             "id": "custom.content.metadata.hrPolicyDocumentGroup",
-            "title": "APP.CONTENT_METADATA.HR_POLICY_DOC_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.HR_POLICY_DOC_GROUP_TITLE",
             "items": [
               {
                 "id": "custom.content.metadata.hrPolicyDocumentType",
-                "aspect": "hr:hrPolicyDocument",
+                "type": "hr:hrPolicyDocument",
                 "properties": [
                   "hr:reviewDate",
                   "hr:status",
@@ -292,254 +262,25 @@
           },
           {
             "id": "custom.content.metadata.hrFormGroup",
-            "title": "APP.CONTENT_METADATA.HR_FORM_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.HR_FORM_GROUP_TITLE",
             "items": [
               {
                 "id": "custom.content.metadata.hrFormType",
-                "aspect": "hr:hrForm",
+                "type": "hr:hrForm",
                 "properties": []
               }
             ]
           },
           {
             "id": "custom.content.metadata.hrTrainingGuideGroup",
-            "title": "APP.CONTENT_METADATA.HR_TRAINING_GUIDE_GROUP_TITLE",
+            "title": "HR_PROJECT.CONTENT_METADATA.HR_TRAINING_GUIDE_GROUP_TITLE",
             "items": [
               {
                 "id": "custom.content.metadata.hrTrainingGuideType",
-                "aspect": "hr:trainingGuide",
+                "type": "hr:trainingGuide",
                 "properties": [
                   "hr:lastUpdatedDate",
                   "hr:relatedPoliciesOrForms"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.customGroup",
-            "title": "APP.CONTENT_METADATA.EXIF_GROUP_TITLE",
-            "items": [
-              {
-                "id": "app.content.metadata.exifAspect",
-                "aspect": "exif:exif",
-                "properties": [
-                  "exif:pixelXDimension",
-                  "exif:pixelYDimension",
-                  "exif:dateTimeOriginal",
-                  "exif:exposureTime",
-                  "exif:fNumber",
-                  "exif:flash",
-                  "exif:focalLength",
-                  "exif:isoSpeedRatings",
-                  "exif:orientation",
-                  "exif:manufacturer",
-                  "exif:model",
-                  "exif:software"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcCoreContactInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_CORE_CONTACT_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "dc:creator",
-                  "photoshop:AuthorsPosition",
-                  "Iptc4xmpCore:CiAdrExtadr",
-                  "Iptc4xmpCore:CiAdrCity",
-                  "Iptc4xmpCore:CiAdrRegion",
-                  "Iptc4xmpCore:CiAdrPcode",
-                  "Iptc4xmpCore:CiAdrCtry",
-                  "Iptc4xmpCore:CiEmailWork",
-                  "Iptc4xmpCore:CiTelWork",
-                  "Iptc4xmpCore:CiUrlWork"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcCoreImageInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_CORE_IMAGE_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "photoshop:DateCreated",
-                  "Iptc4xmpCore:IntellectualGenre",
-                  "Iptc4xmpCore:Scene",
-
-                  "Iptc4xmpCore:Location",
-                  "photoshop:City",
-                  "photoshop:State",
-                  "photoshop:Country"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcCoreContentInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_CORE_CONTENT_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "photoshop:Headline",
-                  "dc:subject",
-                  "dc:description",
-                  "Iptc4xmpCore:SubjectCode",
-                  "photoshop:CaptionWriter"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcCoreStatusInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_CORE_STATUS_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "dc:title",
-                  "photoshop:TransmissionReference",
-                  "photoshop:Instructions",
-                  "photoshop:Credit",
-                  "photoshop:Source",
-                  "dc:rights",
-                  "xmpRights:UsageTerms"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtDescriptionGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_DESCRIPTION",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "Iptc4xmpExt:DigImageGUID",
-                  "Iptc4xmpExt:PersonInImage",
-
-                  "Iptc4xmpExt:LocationCreatedSublocation",
-                  "Iptc4xmpExt:LocationCreatedCity",
-                  "Iptc4xmpExt:LocationCreatedProvinceState",
-                  "Iptc4xmpExt:LocationCreatedCountryName",
-                  "Iptc4xmpExt:LocationCreatedCountryCode",
-                  "Iptc4xmpExt:LocationCreatedWorldRegion",
-
-                  "Iptc4xmpExt:LocationShownSublocation",
-                  "Iptc4xmpExt:LocationShownCity",
-                  "Iptc4xmpExt:LocationShownProvinceState",
-                  "Iptc4xmpExt:LocationShownCountryCode",
-                  "Iptc4xmpExt:LocationShownCountryName",
-                  "Iptc4xmpExt:LocationShownWorldRegion",
-
-                  "Iptc4xmpExt:OrganisationInImageName",
-                  "Iptc4xmpExt:OrganisationInImageCode",
-
-                  "Iptc4xmpExt:Event"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtAODetailGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_AO_DETAIL",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "Iptc4xmpExt:AOTitle",
-                  "Iptc4xmpExt:AODateCreated",
-                  "Iptc4xmpExt:AOCreator",
-                  "Iptc4xmpExt:AOSource",
-                  "Iptc4xmpExt:AOSourceInvNo",
-                  "Iptc4xmpExt:AOCopyrightNotice"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtModelInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_MODEL_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "Iptc4xmpExt:AddlModelInfo",
-                  "Iptc4xmpExt:ModelAge",
-                  "plus:MinorModelAgeDisclosure",
-                  "plus:ModelReleaseStatus",
-                  "plus:ModelReleaseID"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtAdminInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_ADMIN_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "plus:ImageSupplierName",
-                  "plus:ImageSupplierID",
-                  "plus:ImageSupplierImageID",
-                  "Iptc4xmpExt:RegOrgId",
-                  "Iptc4xmpExt:RegItemId",
-                  "Iptc4xmpExt:MaxAvailWidth",
-                  "Iptc4xmpExt:MaxAvailHeight",
-                  "Iptc4xmpExt:DigitalSourcefileType",
-                  "Iptc4xmpExt:DigitalSourceType"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtRightsInfoGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_RIGHTS_INFO",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "plus:ImageCreatorName",
-                  "plus:ImageCreatorID",
-                  "plus:CopyrightOwnerName",
-                  "plus:CopyrightOwnerID",
-
-                  "plus:LicensorName",
-                  "plus:LicensorID",
-                  "plus:LicensorTelephone1",
-                  "plus:LicensorTelephone2",
-                  "plus:LicensorEmail",
-                  "plus:LicensorURL",
-                  "plus:LicensorStreetAddress",
-                  "plus:LicensorExtendedAddress",
-                  "plus:LicensorCity",
-                  "plus:LicensorRegion",
-                  "plus:LicensorPostalCode",
-                  "plus:LicensorCountry",
-
-                  "plus:PropertyReleaseStatus",
-                  "plus:PropertyReleaseID"
-                ]
-              }
-            ]
-          },
-          {
-            "id": "app.content.metadata.iptcExtOtherGroup",
-            "title": "APP.CONTENT_METADATA.GROUP_IPTC_EXT_OTHER",
-            "items": [
-              {
-                "aspect": "iptcxmp:iptcxmpAspect",
-                "properties": [
-                  "Iptc4xmpExt:CVterm",
-                  "Iptc4xmpExt:RegistryId",
-                  "plus:Version",
-                  "Iptc4xmpExt:IptcLastEdited"
                 ]
               }
             ]
@@ -611,7 +352,7 @@
           "id": "app.files.nodeType",
           "key": "nodeType",
           "sortingKey": "nodeType",
-          "title": "APP.DOCUMENT_LIST.COLUMNS.TYPE",
+          "title": "HR_PROJECT.DOCUMENT_LIST.COLUMNS.TYPE",
           "type": "text",
           "class": "adf-ellipsis-cell adf-expand-cell-3 adf-min-width-cell",
           "sortable": true,

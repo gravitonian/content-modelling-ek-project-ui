@@ -1,26 +1,135 @@
 {
-  "APP": {
-    "BROWSE": {
-      "SEARCH": {
-        "HR_POLICY_DOC": "HR Policy Doc"
+  "EK_PROJECT": {
+    "TITLE": "EK Project",
+    "ACTIONS": {
+      "SET_TITLE_DESCRIPTION": "Set Title and Description",
+      "CREATE_CLIENT_SUPPLIER": "Create Client/Supplier Profile",
+      "TAKE_OWNERSHIP": "Take Ownership of folder/file"
+    },
+    "DIALOGS": {
+      "REGULATORY_FRAMEWORKS": {
+        "TITLE": "Regulatory Frameworks",
+        "MESSAGES": {
+          "NO_FRAMEWORKS": "There are currently no framework categories added.",
+          "ADD_FRAMEWORK": "Add regulatory framework category"
+        }
+      },
+      "CONFIRM_TAKE_OWNERSHIP": {
+        "TITLE": "Take Ownership",
+        "MESSAGES": {
+          "CONFIRM" : "Do you want to take ownership of '{{name}}'?",
+          "SUCCESS": "Took ownership of '{{name}}' successfully",
+          "FAILED": "Failed to take ownership of '{{name}}' error = {{error}}"
+        }
+      },
+      "SET_TITLE_DESCRIPTION": {
+        "TITLE": "Set Title and Description",
+        "FIELD": {
+          "TITLE": "Title",
+          "DESCRIPTION": "Description",
+          "REQUIRED": "This field is required"
+        },
+        "BUTTON": {
+          "SAVE": "Save",
+          "CANCEL": "Cancel"
+        },
+        "MESSAGES": {
+          "SUCCESS": "Title and description updated for '{{name}}' successfully",
+          "FAILED": "Failed to update title and description for '{{name}}' error = {{error}}"
+        }
+      },
+      "CREATE_CLIENT_SUPPLIER": {
+        "TITLE": "Create Client/Supplier Profile",
+        "GROUPS": {
+          "BASIC_INFO": "Basic info",
+          "PROFILE_INFO": "Profile info",
+          "CONTACT_INFO": "Contact info",
+          "COMPLIANCE": "Compliance",
+          "RELATED_CONTRACTS": "Related contracts"
+        },
+        "FIELDS": {
+          "NAME": "Name",
+          "TITLE": "Title",
+          "DESCRIPTION": "Description",
+          "PROFILE_NAME": "Profile Name",
+          "PROFILE_TYPE": "Profile Type",
+          "CONTACT_ADDRESS": "Contact Address",
+          "CONTACT_PHONE": "Contact Phone",
+          "CONTACT_EMAIL": "Contact Email",
+          "COMPLIANCE_CERTIFICATIONS": "Compliance Certifications",
+          "RELATED_CONTRACTS": "Related Contracts",
+          "PROFILE_TYPES": {
+            "SUPPLIER": "Supplier",
+            "CLIENT": "Client"
+          }
+        },
+        "VALIDATION": {
+          "REQUIRED": "This field is required",
+          "MAX_LENGTH": "Maximum length exceeded",
+          "EMAIL": "Invalid email format"
+        },
+        "ACTIONS": {
+          "SELECT_CONTRACTS": "Select Contracts",
+          "REMOVE_CONTRACT": "Remove Contract"
+        },
+        "BUTTON": {
+          "ADD_CONTRACTS": "Add contracts",
+          "CANCEL": "Cancel",
+          "CREATE": "Create"
+        },
+        "MESSAGES": {
+          "SUCCESS": "Client/Supplier profile '{{name}}' created successfully",
+          "FAILED": "Failed to create Client/Supplier profile"
+        }
+      },
+      "CONTRACT_PICKER": {
+        "TITLE": "Select contracts",
+        "BUTTON": {
+          "CANCEL": "Cancel",
+          "SELECT": "OK"
+        },
+        "MESSAGES": {
+          "SELECTED_CONTRACTS": "Selected contracts",
+          "NO_CONTRACTS": "No contracts selected"
+        }
       }
     },
-    "DOCUMENT_LIST": {
-      "COLUMNS": {
-        "TYPE": "Content Type"
+    "SEARCH": {
+      "EK_DOCUMENTS": "Enterprise Knowledgebase docs",
+      "CORPORATE_POLICY": "EK Corporate Policy docs",
+      "PROCEDURE_DOC": "EK Procedure docs",
+      "CONTRACT_DOC": "EK Contract docs",
+      "COMPLIANCE_REPORT": "EK Compliance Report docs",
+      "FIELDS": {
+        "CONTRACT_EFFECTIVE_DATE": "Effective date",
+        "CONTRACT_EXPIRATION_DATE": "Expire date"
+      },
+      "CATEGORIES": {
+        "DOCUMENT_TYPE": "Document Type",
+        "REGULATORY_FRAMEWORKS": "Regulatory Frameworks",
+        "POLICY_RETENTION": "Policy Retention (years)",
+        "REVIEW_INTERVAL":"Review Interval",
+        "APPROVAL_WORKFLOW_STATE": "Approval Workflow State",
+        "EFFECTIVE_DATE": "Effective Date",
+        "RESPONSIBLE_DEPARTMENT": "Responsible Department",
+        "CONTRACT_DATE": "Contract Dates",
+        "CONTRACT_TYPE": "Contract Type",
+        "CONTRACT_STATUS": "Contract Status",
+        "REPORT_TYPE": "Report Type",
+        "COMPLIANCE_STATUS": "Compliance Status",
+        "CONFIDENTIALITY_LEVEL": "Confidentiality Level"
+
       }
     },
-    "CONTENT_METADATA": {
-      "TITLED_GROUP_TITLE": "Titled",
-      "VERSIONING_GROUP_TITLE": "Versioning",
-      "HR_EMPLOYEE_HANDBOOK_GROUP_TITLE": "HR Handbook",
-      "HR_POLICY_DOC_GROUP_TITLE": "HR Policy Doc",
-      "HR_FORM_GROUP_TITLE": "HR Form",
-      "HR_TRAINING_GUIDE_GROUP_TITLE": "HR Training Guide"
-    },
-    "CATEGORIES": {
-      "HR_REVIEW_DATE": "HR Review Date",
-      "HR_POLICY_DOC_STATUS": "HR Policy Status"
+    "METADATA": {
+      "DOC_BASE_GROUP_TITLE": "EK Document",
+      "CORPORATE_POLICY_GROUP_TITLE": "Corporate Policy",
+      "PROCEDURE_DOC_GROUP_TITLE": "Procedure Doc",
+      "CONTRACT_DOC_GROUP_TITLE": "Contract Doc",
+      "COMPLIANCE_REPORT_GROUP_TITLE": "Compliance Report",
+      "SUPPLIER_CLIENT_PROFILE_GROUP_TITLE": "Supplier/Client Profile",
+      "REGULATORY_FRAMEWORK_GROUP_TITLE": "Regulatory Framework",
+      "REGULATORY_EFFECTIVE_GROUP_TITLE": "Regulatory Effective"
     }
   }
 }

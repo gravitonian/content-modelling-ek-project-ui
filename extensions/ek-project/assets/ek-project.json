@@ -38,7 +38,7 @@
         "name": "EK_PROJECT.SEARCH.EK_DOCUMENTS",
         "default": false,
         "filterWithContains": true,
-        "app:fields": ["cm:name", "cm:title", "cm:description", "TEXT", "TAG"],
+        "app:fields": ["cm:name", "cm:title", "cm:description", "ek:docId","TEXT", "TAG"],
         "include": ["path", "allowableOperations", "properties"],
         "sorting": {
           "options": [
@@ -1227,7 +1227,7 @@
             "items": [
               {
                 "id": "ek.content.metadata.supplierClientProfileType",
-                "aspect": "ek:supplierClientProfileData",
+                "type": "ek:supplierClientProfileData",
                 "properties": [
                   "ek:profileName",
                   "ek:profileType",

@@ -1,0 +1,12 @@
+.aca-set-title-description-dialog {
+  min-width: 400px;
+  padding: 10px 0;
+
+  .full-width {
+    width: 100%;
+  }
+
+  mat-dialog-content {
+    max-height: unset;
+  }
+}

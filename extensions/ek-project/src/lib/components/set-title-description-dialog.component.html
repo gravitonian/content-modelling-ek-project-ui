@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>{{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.TITLE' | translate }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <div class="aca-set-title-description-dialog">
+      <div>
+        <mat-form-field class="full-width">
+          <mat-label>{{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.FIELD.TITLE' | translate }}</mat-label>
+          <input matInput formControlName="title" required>
+          <mat-error *ngIf="form.controls.title.errors?.required">
+            {{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.FIELD.REQUIRED' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="full-width">
+          <mat-label>{{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.FIELD.DESCRIPTION' | translate }}</mat-label>
+          <textarea matInput formControlName="description" rows="5"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button
+      mat-button
+      type="button"
+      (click)="onCancel()"
+      data-automation-id="metadata-cancel-button">
+      {{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.BUTTON.CANCEL' | translate }}
+    </button>
+    <button
+      mat-button
+      color="primary"
+      type="submit"
+      [disabled]="!form.valid"
+      data-automation-id="metadata-save-button">
+      {{ 'EK_PROJECT.DIALOGS.SET_TITLE_DESCRIPTION.BUTTON.SAVE' | translate }}
+    </button>
+  </mat-dialog-actions>
+</form>

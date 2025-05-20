@@ -1,0 +1,77 @@
+/* create-client-supplier-dialog.component.scss */
+.supplier-client-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+
+  h3 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 16px;
+
+    .half-width {
+      width: 50%;
+    }
+  }
+
+  .certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    mat-checkbox {
+      margin-right: 16px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+/* Fix for Material form field labels in empty state */
+:host ::ng-deep {
+  /* Make sure labels are always floated (positioned above the input) */
+  .mat-form-field-appearance-outline .mat-form-field-label {
+    top: 0;
+    margin-top: -0.25em;
+  }
+
+  /* Ensure the form field always behaves as if it should float the label */
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1em 0 1em 0;
+  }
+
+  /* Make sure label is properly positioned when floating */
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus + .mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.1em) scale(0.75);
+  }
+
+  /* Even when empty, float the label */
+  .mat-form-field.mat-focused .mat-form-field-label,
+  .mat-form-field.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(0.75);
+  }
+
+  /* Alternative approach - always float all labels */
+  .mat-form-field-appearance-outline .mat-form-field-label {
+    transform: translateY(-1.1em) scale(0.75);
+  }
+}
+
+/* Dialog sizing and scrolling */
+.mat-dialog-content {
+  max-height: 65vh;
+  overflow-y: auto;
+}

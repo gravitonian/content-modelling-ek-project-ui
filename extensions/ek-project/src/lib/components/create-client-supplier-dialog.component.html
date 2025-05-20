@@ -1,0 +1,105 @@
+<h2 mat-dialog-title>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.TITLE' | translate }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div mat-dialog-content>
+    <div class="supplier-client-form-container">
+      <!-- Basic Information Section -->
+      <h3>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.GROUPS.BASIC_INFO' | translate }}</h3>
+
+      <!-- Using floatLabel="always" to ensure labels are always positioned correctly -->
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.NAME' | translate }}</mat-label>
+        <input matInput formControlName="name" required>
+        <mat-error *ngIf="form.get('name')?.hasError('required')">
+          {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.VALIDATION.REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.TITLE' | translate }}</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.DESCRIPTION' | translate }}</mat-label>
+        <textarea matInput formControlName="description" rows="3"></textarea>
+      </mat-form-field>
+
+      <!-- Profile Information Section -->
+      <h3>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.GROUPS.PROFILE_INFO' | translate }}</h3>
+
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.PROFILE_NAME' | translate }}</mat-label>
+        <input matInput formControlName="profileName" required>
+        <mat-error *ngIf="form.get('profileName')?.hasError('required')">
+          {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.VALIDATION.REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.PROFILE_TYPE' | translate }}</mat-label>
+        <mat-select formControlName="profileType" required>
+          <mat-option *ngFor="let type of profileTypes" [value]="type.value">
+            {{ type.label | translate }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('profileType')?.hasError('required')">
+          {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.VALIDATION.REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Contact Information Section -->
+      <h3>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.GROUPS.CONTACT_INFO' | translate }}</h3>
+
+      <mat-form-field appearance="outline" class="full-width" floatLabel="always">
+        <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.CONTACT_ADDRESS' | translate }}</mat-label>
+        <textarea matInput formControlName="contactAddress" rows="2"></textarea>
+      </mat-form-field>
+
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="half-width" floatLabel="always">
+          <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.CONTACT_PHONE' | translate }}</mat-label>
+          <input matInput formControlName="contactPhone">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="half-width" floatLabel="always">
+          <mat-label>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.FIELDS.CONTACT_EMAIL' | translate }}</mat-label>
+          <input matInput formControlName="contactEmail" type="email">
+          <mat-error *ngIf="form.get('contactEmail')?.hasError('email')">
+            {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.VALIDATION.EMAIL' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Compliance Section -->
+      <h3>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.GROUPS.COMPLIANCE' | translate }}</h3>
+
+      <div class="certifications-container">
+        <mat-checkbox
+          *ngFor="let cert of complianceCertifications"
+          [checked]="cert.checked"
+          (change)="toggleCertification(cert)">
+          {{ cert.value }}
+        </mat-checkbox>
+      </div>
+
+      <!-- Related Contracts Section -->
+      <h3>{{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.GROUPS.RELATED_CONTRACTS' | translate }}</h3>
+
+      <!-- Contract picker component -->
+      <ek-contract-picker
+        [selectedContracts]="selectedContracts"
+        (contractsSelected)="onContractsSelected($event)">
+      </ek-contract-picker>
+    </div>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="onCancel()">
+      {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.BUTTON.CANCEL' | translate }}
+    </button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+      {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.BUTTON.CREATE' | translate }}
+    </button>
+  </div>
+</form>

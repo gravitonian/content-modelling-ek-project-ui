@@ -1,0 +1,28 @@
+<div class="contract-picker-container">
+  <div class="contract-picker-button">
+    <button mat-stroked-button color="primary" type="button" (click)="openContractSelector()">
+      <mat-icon>add</mat-icon>
+      {{ 'EK_PROJECT.DIALOGS.CREATE_CLIENT_SUPPLIER.BUTTON.ADD_CONTRACTS' | translate }}
+    </button>
+  </div>
+
+  <div class="selected-contracts" *ngIf="selectedContracts && selectedContracts.length > 0">
+    <h4>{{ 'EK_PROJECT.DIALOGS.CONTRACT_PICKER.MESSAGES.SELECTED_CONTRACTS' | translate }}</h4>
+
+    <mat-chip-listbox>
+      <mat-chip-option
+        *ngFor="let contract of selectedContracts"
+        [removable]="true"
+        (removed)="removeContract(contract)">
+
+        {{ contract.name }}
+
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+
+  <div class="no-contracts-selected" *ngIf="!selectedContracts || selectedContracts.length === 0">
+    <p class="mat-caption">{{ 'EK_PROJECT.DIALOGS.CONTRACT_PICKER.MESSAGES.NO_CONTRACTS' | translate }}</p>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.contract-picker-container {
+  margin-bottom: 24px;
+
+  .contract-picker-button {
+    margin-bottom: 16px;
+  }
+
+  .selected-contracts {
+    margin-top: 16px;
+
+    h4 {
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    mat-chip-list {
+      margin-bottom: 16px;
+    }
+  }
+
+  .no-contracts-selected {
+    color: rgba(0, 0, 0, 0.54);
+    font-style: italic;
+    margin: 8px 0;
+  }
+}

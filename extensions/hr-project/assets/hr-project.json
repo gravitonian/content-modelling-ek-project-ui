@@ -132,7 +132,7 @@
           },
           {
             "id": "hrReviewDate",
-            "name": "SEARCH.CATEGORIES.HR_REVIEW_DATE",
+            "name": "HR_PROJECT.CATEGORIES.HR_REVIEW_DATE",
             "enabled": true,
             "component": {
               "selector": "date-range",
@@ -142,14 +142,14 @@
                 "field": "hr:reviewDate",
                 "dateFormat": "dd-MMM-yy",
                 "displayedLabelsByField": {
-                  "cm:created": "SEARCH.CATEGORIES.HR_REVIEW_DATE"
+                  "cm:created": "HR_PROJECT.CATEGORIES.HR_REVIEW_DATE"
                 }
               }
             }
           },
           {
             "id": "hrPolicyDocStatus",
-            "name": "SEARCH.CATEGORIES.HR_POLICY_DOC_STATUS",
+            "name": "HR_PROJECT.CATEGORIES.HR_POLICY_DOC_STATUS",
             "enabled": true,
             "component": {
               "selector": "check-list",
